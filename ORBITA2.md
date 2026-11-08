@@ -82,7 +82,7 @@ Pantallas cambiadas y el que de cada una:
       - Se ajustaron tamaños de letra
       - Se redució tamaño de los botones
     - Inicio:
-      - Se amplió el tamaño de las tarjetas para mejor accesibilidad
+      - Se mejoró el estilo de las tarjetas
     - Mi armario:
      - Se ajusto el tamaño de las tarjetas haciendolas que den mas información y se ajusten mejor a la web
     - Añadir prenda:
