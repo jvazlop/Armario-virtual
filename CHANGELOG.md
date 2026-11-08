@@ -19,3 +19,22 @@
 - **Qué se ha aprovechado:** las correcciones de ortografía y las sugerencias para que los textos sean más claros y fáciles de entender.
 - **Revisión personal:** se revisaron los cambios para mantener las ideas originales y adaptarlas al proyecto.
 - **¿Por qué?** Porque quiero mantener una buena estructura gramatical para el proyecto y sin faltas de ortografía
+
+
+## 07/11/2026
+### Uso de IA
+
+- **Objetivo:** Generación de imagenes para mockup
+- **Uso realizado:** se utilizó la IA para generar las imagenes del mockup
+- **Qué se ha aprovechado:** como ejemplos para tarjetas y fotos de perfil
+- **Revisión personal:** se aceptaron las imagenes
+- **¿Por qué?** Para facilitar la colocación de imagenes de ejemplo
+
+## 07/11/2026
+### Uso de IA
+
+- **Objetivo:** Generación de los renames de frames
+- **Uso realizado:** se utilizó la IA para generar nombres a los frames sin nombre
+- **Qué se ha aprovechado:** los nombres colocados por la ia
+- **Revisión personal:** se aceptaron esos nombres
+- **¿Por qué?** Para poder identificar mejor que significa cada frame
