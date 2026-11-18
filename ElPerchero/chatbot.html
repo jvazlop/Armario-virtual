@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElPerchero - ChatBot</title>
+</head>
+<body>
+
+    <aside class="barra-lateral">
+        <header class="logo">
+            <h1>ElPerchero</h1>
+        </header>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="armario.html">Armario</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="chatbot.html">Chat bot</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+
+    <main class="zona-principal">
+        <header class="cabecera-chat">
+            <h2>ChatBot</h2>
+        </header>
+
+        <section class="caja-chat" aria-label="Conversación con el asistente">
+            <section class="historial-mensajes" aria-live="polite">
+                <article class="mensaje usuario">
+                    <p>¿Que me pongo hoy?</p>
+                </article>
+
+                <article class="mensaje bot">
+                    <p>Buenos dias hoy deberias ponerte este conjunto</p>
+                </article>
+            </section>
+
+            <form class="barra-envio" action="#" method="get">
+                <input type="text" name="mensaje" placeholder="Mensaje" aria-label="Escribe un mensaje" required>
+                <button type="submit" aria-label="Enviar mensaje">➤</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
