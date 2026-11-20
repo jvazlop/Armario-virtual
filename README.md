@@ -1,20 +1,31 @@
 # Armario-virtual
 
-## Descripción
+## Descripcion
+Aplicacion de armario virtual para organizar prendas, crear combinaciones y aprovechar mejor la ropa que ya tienes.
 
-Este proyecto consiste en diseñar una aplicación de armario virtual que permita organizar las prendas de ropa y crear combinaciones mediante IA.
-La idea es ayudar a las personas a aprovechar mejor la ropa que ya tienen, descubrir nuevas combinaciones y perder menos tiempo decidiendo qué ponerse.
+## Backlog
 
-## Enlaces del proyecto
+| Prioridad | Funcionalidad | Descripcion |
+|-----------|---------------|-------------|
+| Alta | Listado de prendas | Grid con tarjetas (imagen, nombre, categoria) y modal detalle al click |
+| Alta | Anadir prenda | Formulario: imagen, nombre, categoria, color, talla, marca, temporada, favorito; validacion y guardado en localStorage |
+| Alta | Editar/Eliminar | Editar o borrar prendas desde el detalle con confirmacion |
+| Alta | Favoritos | Toggle en tarjetas y modal; vista filtrada en Favoritos |
+| Media | Filtro por categoria | Selector para filtrar grid por tipo de prenda |
+| Media | Busqueda | Input que filtra por nombre, marca, color o descripcion |
+| Media | localStorage | Guardar prendas, favoritos y estado entre sesiones |
+| Baja | ChatBot outfits | IA que recomienda combinaciones segun ocasion/clima |
+| Baja | Perfil usuario | Datos personales, configuracion, ayuda, logout |
+| Baja | Modo SPA | Router hash/history, navegacion sin recarga, transiciones |
 
-- **Tablero de investigación (FigJam):** [Ver tablero](https://www.figma.com/board/8RQsKcxiOTdO4fBIkMZgCk/Proyecto?node-id=27-35&t=LW5LJ4o6Hd9gvnUl-4)
-- **Entrevista 1:** [Ver entrevista](https://www.figma.com/board/8RQsKcxiOTdO4fBIkMZgCk/Proyecto?node-id=82-295&t=LW5LJ4o6Hd9gvnUl-4)
-- **Entrevista 2:** [Ver entrevista](https://www.figma.com/board/8RQsKcxiOTdO4fBIkMZgCk/Proyecto?node-id=82-313&t=LW5LJ4o6Hd9gvnUl-4)
-- **Definición del MVP:** [Ver MVP](https://www.figma.com/board/8RQsKcxiOTdO4fBIkMZgCk/Proyecto?node-id=85-390&t=LW5LJ4o6Hd9gvnUl-4)
-- **Persona principal — El indeciso:** [Ver persona](https://www.figma.com/board/8RQsKcxiOTdO4fBIkMZgCk/Proyecto?node-id=85-297&t=LW5LJ4o6Hd9gvnUl-4)
-- **Persona secundaria — El organizador:** [Ver persona](https://www.figma.com/board/8RQsKcxiOTdO4fBIkMZgCk/Proyecto?node-id=85-297&t=LW5LJ4o6Hd9gvnUl-4)
-- **Diseño en Figma:** [Ver diseño](https://www.figma.com/design/p5Lmh3AxWE67HLhqqP1ANf/Interfaz-web-Armario-virtual?m=auto&t=LjoV9GL9JNW9FhcY-6)
-- **Prototipo interactivo:** [Ver prototipo version movil](https://www.figma.com/proto/p5Lmh3AxWE67HLhqqP1ANf/Interfaz-web-Armario-virtual?node-id=13-7&viewport=-870%2C221%2C0.12&t=5ct9fEZcd7oQZmC0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=13%3A7&show-proto-sidebar=1&page-id=0%3A1)
-- **Prototipo interactivo:**[Ver prototipo version desktop](https://www.figma.com/proto/p5Lmh3AxWE67HLhqqP1ANf/Interfaz-web-Armario-virtual?node-id=44-274&p=f&viewport=-1280%2C278%2C0.17&t=tkITsiFb8FMHJPLi-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=44%3A274&show-proto-sidebar=1&page-id=0%3A1)
-- **Brief del proyecto:** [BRIEF.md](Brief.md)
-- **Changelog:** [CHANGELOG.md](CHANGELOG.md)
+## Mapa de pantallas
+
+| Vista | Ruta | Que muestra |
+|-------|------|-------------|
+| Inicio | index.html | Hero, stats, 4 accesos rapidos (Armario, Anadir, ChatBot, Favoritos) |
+| Armario | armario.html | Grid de todas las prendas con imagen y nombre; click abre modal detalle |
+| Detalle | prendaespecifica.html?id=X | Ficha completa: imagen, nombre, categoria, color, talla, marca, temporada, descripcion |
+| Favoritos | favoritos.html | Grid filtrado solo prendas favoritas |
+| Anadir | anadir-prenda.html | Formulario: imagen, nombre, categoria, color, talla, marca, temporada, favorito |
+| ChatBot | chatbot.html | Chat con historial y barra de envio |
+| Perfil | perfil.html | Nombre, email, enlaces: Favoritos, Configuracion, Ayuda, Logout |
