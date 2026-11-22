@@ -1,0 +1,28 @@
+@use '../settings' as *;
+
+// Conversión px a rem
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+// Clamp fluido
+@function fluid($min, $preferred, $max) {
+  @return clamp(#{$min}, #{$preferred}, #{$max});
+}
+
+// Contraste de color
+@function text-color($bg-color) {
+  @if lightness($bg-color) > 50% {
+    @return $neutral-900;
+  } @else {
+    @return $neutral-50;
+  }
+}
+
+// Escala de espaciado
+@function spacing($step) {
+  @if map-has-key(($space-1: $space-1, $space-2: $space-2, $space-3: $space-3, $space-4: $space-4, $space-5: $space-5, $space-6: $space-6, $space-8: $space-8, $space-10: $space-10, $space-12: $space-12, $space-15: $space-15, $space-16: $space-16), 'space-#{$step}') {
+    @return map-get(($space-1: $space-1, $space-2: $space-2, $space-3: $space-3, $space-4: $space-4, $space-5: $space-5, $space-6: $space-6, $space-8: $space-8, $space-10: $space-10, $space-12: $space-12, $space-15: $space-15, $space-16: $space-16), 'space-#{$step}');
+  }
+  @return 0;
+}
