@@ -1,0 +1,97 @@
+$neutral-50:  #f8f7fc;
+$neutral-100: #f5f3fa;
+$neutral-150: #f0edf7;
+$neutral-200: #e8e5ef;
+$neutral-300: #d8d3e2;
+$neutral-600: #514b61;
+$neutral-700: #393743;
+$neutral-800: #292733;
+$neutral-900: #1c1b24;
+$neutral-950: #111116;
+$white:       #ffffff;
+
+$purple-300: #b69aff;
+$purple-500: #8b5cf6;
+$purple-700: #5b35b5;
+$purple-900: #211a35;
+
+$green-700:  #15803d;
+$green-400:  #34d399;
+$red-600:    #dc2626;
+$red-400:    #f87171;
+$amber-700:  #a16207;
+$amber-400:  #fbbf24;
+$blue-700:   #1d4ed8;
+$blue-400:   #60a5fa;
+
+$pink-500: #ff4fa3;
+
+$color-background:         light-dark($neutral-50, $neutral-950);
+$color-surface:            light-dark($white, $neutral-900);
+$color-surface-secondary:  light-dark($neutral-150, $neutral-800);
+
+$color-primary:        light-dark($purple-700, $purple-300);
+$color-primary-hover:  light-dark($purple-900, $purple-700);
+$color-primary-pressed: light-dark($purple-900, $purple-700);
+$color-accent:         $pink-500;
+$color-on-primary:     light-dark($neutral-50, $neutral-950);
+
+$color-text-primary:   light-dark($purple-900, $neutral-50);
+$color-text-secondary: light-dark($neutral-600, $neutral-200);
+
+$color-border: light-dark($neutral-300, $neutral-700);
+
+$color-success: light-dark($green-700, $green-400);
+$color-error:   light-dark($red-600, $red-400);
+$color-warning: light-dark($amber-700, $amber-400);
+$color-info:    light-dark($blue-700, $blue-400);
+
+:root {
+  --neutral-50:  #{$neutral-50};
+  --neutral-100: #{$neutral-100};
+  --neutral-150: #{$neutral-150};
+  --neutral-200: #{$neutral-200};
+  --neutral-300: #{$neutral-300};
+  --neutral-600: #{$neutral-600};
+  --neutral-700: #{$neutral-700};
+  --neutral-800: #{$neutral-800};
+  --neutral-900: #{$neutral-900};
+  --neutral-950: #{$neutral-950};
+  --white:       #{$white};
+
+  --purple-300: #{$purple-300};
+  --purple-500: #{$purple-500};
+  --purple-700: #{$purple-700};
+  --purple-900: #{$purple-900};
+
+  --green-700:  #{$green-700};
+  --green-400:  #{$green-400};
+  --red-600:    #{$red-600};
+  --red-400:    #{$red-400};
+  --amber-700:  #{$amber-700};
+  --amber-400:  #{$amber-400};
+  --blue-700:   #{$blue-700};
+  --blue-400:   #{$blue-400};
+
+  --pink-500: #{$pink-500};
+
+  --color-background:         #{$color-background};
+  --color-surface:            #{$color-surface};
+  --color-surface-secondary:  #{$color-surface-secondary};
+
+  --color-primary:         #{$color-primary};
+  --color-primary-hover:   #{$color-primary-hover};
+  --color-primary-pressed: #{$color-primary-pressed};
+  --color-accent:          #{$color-accent};
+  --color-on-primary:      #{$color-on-primary};
+
+  --color-text-primary:   #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+
+  --color-border: #{$color-border};
+
+  --color-success: #{$color-success};
+  --color-error:   #{$color-error};
+  --color-warning: #{$color-warning};
+  --color-info:    #{$color-info};
+}
