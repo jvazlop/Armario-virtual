@@ -1,8 +1,9 @@
-@use '../settings' as *;
+@use '../settings' as s;
+@use '../tools' as *;
 
 .o-grid {
   display: grid;
-  gap: $space-4;
+  gap: s.$space-4;
 }
 
 .o-grid--cols-1 {
@@ -29,7 +30,7 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-@include tools.tablet {
+@include tablet {
   .o-grid--cols-2-tablet {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -38,7 +39,7 @@
   }
 }
 
-@include tools.desktop {
+@include desktop {
   .o-grid--cols-2-desktop {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -1,56 +1,56 @@
-@use '../settings' as *;
+@use '../settings' as s;
 
 h1 {
-  font-family: $font-family-primary;
-  font-size: $font-size-h1;
-  line-height: $line-height-h1;
-  font-weight: $font-weight-bold;
-  color: $color-text-primary;
+  font-family: s.$font-family-primary;
+  font-size: s.$font-size-h1;
+  line-height: s.$line-height-h1;
+  font-weight: s.$font-weight-bold;
+  color: s.$color-text-primary;
 }
 
 h2 {
-  font-family: $font-family-primary;
-  font-size: $font-size-h2;
-  line-height: $line-height-h2;
-  font-weight: $font-weight-bold;
-  color: $color-text-primary;
+  font-family: s.$font-family-primary;
+  font-size: s.$font-size-h2;
+  line-height: s.$line-height-h2;
+  font-weight: s.$font-weight-bold;
+  color: s.$color-text-primary;
 }
 
 h3 {
-  font-family: $font-family-primary;
-  font-size: $font-size-h3;
-  line-height: $line-height-h3;
-  font-weight: $font-weight-bold;
-  color: $color-text-primary;
+  font-family: s.$font-family-primary;
+  font-size: s.$font-size-h3;
+  line-height: s.$line-height-h3;
+  font-weight: s.$font-weight-bold;
+  color: s.$color-text-primary;
 }
 
 p {
-  font-family: $font-family-secondary;
-  font-size: $font-size-body;
-  line-height: $line-height-body;
-  color: $color-text-primary;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-body;
+  line-height: s.$line-height-body;
+  color: s.$color-text-primary;
 }
 
 label {
-  font-family: $font-family-secondary;
-  font-size: $font-size-label;
-  line-height: $line-height-label;
-  font-weight: $font-weight-medium;
-  color: $color-text-primary;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-label;
+  line-height: s.$line-height-label;
+  font-weight: s.$font-weight-medium;
+  color: s.$color-text-primary;
 }
 
 small,
 .caption {
-  font-family: $font-family-secondary;
-  font-size: $font-size-caption;
-  line-height: $line-height-caption;
-  color: $color-text-secondary;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-caption;
+  line-height: s.$line-height-caption;
+  color: s.$color-text-secondary;
 }
 
 .display {
-  font-family: $font-family-primary;
-  font-size: $font-size-display;
-  line-height: $line-height-display;
-  font-weight: $font-weight-bold;
-  color: $color-text-primary;
+  font-family: s.$font-family-primary;
+  font-size: s.$font-size-display;
+  line-height: s.$line-height-display;
+  font-weight: s.$font-weight-bold;
+  color: s.$color-text-primary;
 }

@@ -1,4 +1,4 @@
-@use '../settings' as *;
+@use '../settings' as s;
 
 html {
   font-size: 16px;
@@ -6,11 +6,11 @@ html {
 }
 
 body {
-  font-family: $font-family-primary;
-  font-size: $font-size-body;
-  line-height: $line-height-body;
-  color: $color-text-primary;
-  background-color: $color-background;
+  font-family: s.$font-family-primary;
+  font-size: s.$font-size-body;
+  line-height: s.$line-height-body;
+  color: s.$color-text-primary;
+  background-color: s.$color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

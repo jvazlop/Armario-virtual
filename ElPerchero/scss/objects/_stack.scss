@@ -1,4 +1,4 @@
-@use '../settings' as *;
+@use '../settings' as s;
 
 .o-stack {
   display: flex;
@@ -6,21 +6,21 @@
 }
 
 .o-stack--xs > * + * {
-  margin-top: $space-1;
+  margin-top: s.$space-1;
 }
 
 .o-stack--sm > * + * {
-  margin-top: $space-2;
+  margin-top: s.$space-2;
 }
 
 .o-stack--md > * + * {
-  margin-top: $space-4;
+  margin-top: s.$space-4;
 }
 
 .o-stack--lg > * + * {
-  margin-top: $space-6;
+  margin-top: s.$space-6;
 }
 
 .o-stack--xl > * + * {
-  margin-top: $space-8;
+  margin-top: s.$space-8;
 }

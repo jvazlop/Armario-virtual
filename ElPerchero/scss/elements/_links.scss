@@ -1,49 +1,49 @@
-@use '../settings' as *;
+@use '../settings' as s;
 @use '../tools' as *;
 
 a {
-  color: $color-primary;
+  color: s.$color-primary;
   text-decoration: none;
-  @include tools.transition-fast(color);
+  @include transition-fast(color);
 
   &:hover {
-    color: $color-primary-hover;
+    color: s.$color-primary-hover;
     text-decoration: underline;
   }
 
   &:focus-visible {
-    @include tools.focus-visible;
+    @include focus-visible;
   }
 }
 
 .menu a {
-  color: $color-text-primary;
-  font-family: $font-family-secondary;
-  font-size: $font-size-body;
-  font-weight: $font-weight-medium;
-  padding: $space-2 $space-3;
-  border-radius: $radius-sm;
-  @include tools.transition-fast(background-color, color);
+  color: s.$color-text-primary;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-body;
+  font-weight: s.$font-weight-medium;
+  padding: s.$space-2 s.$space-3;
+  border-radius: s.$radius-sm;
+  @include transition-fast(background-color, color);
 
   &:hover {
-    color: $color-primary;
-    background-color: $color-surface-secondary;
+    color: s.$color-primary;
+    background-color: s.$color-surface-secondary;
     text-decoration: none;
   }
 
   &:focus-visible {
-    @include tools.focus-visible;
+    @include focus-visible;
   }
 }
 
 .logo a {
-  color: $color-text-primary;
-  font-family: $font-family-primary;
-  font-size: $font-size-h2;
-  font-weight: $font-weight-bold;
+  color: s.$color-text-primary;
+  font-family: s.$font-family-primary;
+  font-size: s.$font-size-h2;
+  font-weight: s.$font-weight-bold;
   text-decoration: none;
 
   &:hover {
-    color: $color-primary;
+    color: s.$color-primary;
   }
 }

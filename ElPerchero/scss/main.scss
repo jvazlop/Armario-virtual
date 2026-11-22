@@ -1,6 +1,10 @@
-@use 'settings' as *;
-@use 'tools' as *;
-@use 'generic';
-@use 'elements';
-@use 'objects';
-@use 'utilities';
+@use 'settings';
+@use 'generic/reset';
+@use 'generic/normalize';
+@use 'elements/base';
+@use 'elements/typography';
+@use 'elements/links';
+@use 'elements/forms';
+@use 'objects/container';
+@use 'objects/stack';
+@use 'objects/grid';

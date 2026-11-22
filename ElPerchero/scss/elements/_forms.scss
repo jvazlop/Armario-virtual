@@ -1,32 +1,32 @@
-@use '../settings' as *;
+@use '../settings' as s;
 @use '../tools' as *;
 
 input,
 textarea,
 select {
   width: 100%;
-  padding: $space-3 $space-4;
-  font-family: $font-family-secondary;
-  font-size: $font-size-body;
-  line-height: $line-height-body;
-  color: $color-text-primary;
-  background-color: $color-surface;
-  border: 1px solid $color-border;
-  border-radius: $radius-sm;
-  @include tools.transition-fast(border-color, box-shadow);
+  padding: s.$space-3 s.$space-4;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-body;
+  line-height: s.$line-height-body;
+  color: s.$color-text-primary;
+  background-color: s.$color-surface;
+  border: 1px solid s.$color-border;
+  border-radius: s.$radius-sm;
+  @include transition-fast(border-color, box-shadow);
 
   &:hover {
-    border-color: $color-primary;
+    border-color: s.$color-primary;
   }
 
   &:focus {
     outline: none;
-    border-color: $color-primary;
-    box-shadow: 0 0 0 3px color-mix(in srgb, $color-primary 20%, transparent);
+    border-color: s.$color-primary;
+    box-shadow: 0 0 0 3px color-mix(in srgb, s.$color-primary 20%, transparent);
   }
 
   &::placeholder {
-    color: $color-text-secondary;
+    color: s.$color-text-secondary;
   }
 
   &:disabled {
@@ -36,45 +36,45 @@ select {
 }
 
 input[type="file"] {
-  padding: $space-2;
+  padding: s.$space-2;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
   height: 1.25rem;
   width: 1.25rem;
-  accent-color: $color-primary;
+  accent-color: s.$color-primary;
   cursor: pointer;
 }
 
 fieldset {
-  border: 1px solid $color-border;
-  border-radius: $radius-sm;
-  padding: $space-4;
+  border: 1px solid s.$color-border;
+  border-radius: s.$radius-sm;
+  padding: s.$space-4;
   margin: 0;
 
   legend {
-    font-family: $font-family-secondary;
-    font-size: $font-size-label;
-    font-weight: $font-weight-bold;
-    color: $color-text-primary;
-    padding: 0 $space-2;
+    font-family: s.$font-family-secondary;
+    font-size: s.$font-size-label;
+    font-weight: s.$font-weight-bold;
+    color: s.$color-text-primary;
+    padding: 0 s.$space-2;
   }
 }
 
 label {
   display: block;
-  margin-bottom: $space-2;
+  margin-bottom: s.$space-2;
 }
 
 .opcion-favorito {
   display: flex;
   align-items: center;
-  gap: $space-2;
+  gap: s.$space-2;
   cursor: pointer;
-  font-family: $font-family-secondary;
-  font-size: $font-size-body;
-  color: $color-text-primary;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-body;
+  color: s.$color-text-primary;
 
   input[type="checkbox"] {
     margin: 0;
@@ -86,15 +86,15 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: $space-8;
-  border: 2px dashed $color-border;
-  border-radius: $radius-sm;
-  background-color: $color-surface;
-  @include tools.transition-fast(border-color, background-color);
+  padding: s.$space-8;
+  border: 2px dashed s.$color-border;
+  border-radius: s.$radius-sm;
+  background-color: s.$color-surface;
+  @include transition-fast(border-color, background-color);
 
   &:hover {
-    border-color: $color-primary;
-    background-color: $color-surface-secondary;
+    border-color: s.$color-primary;
+    background-color: s.$color-surface-secondary;
   }
 
   input[type="file"] {
@@ -103,27 +103,27 @@ label {
 }
 
 .texto-principal {
-  font-family: $font-family-secondary;
-  font-size: $font-size-body;
-  color: $color-text-primary;
-  margin-bottom: $space-1;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-body;
+  color: s.$color-text-primary;
+  margin-bottom: s.$space-1;
 }
 
 .formatos-aceptados {
-  font-family: $font-family-secondary;
-  font-size: $font-size-caption;
-  color: $color-text-secondary;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-caption;
+  color: s.$color-text-secondary;
 }
 
 button {
-  font-family: $font-family-secondary;
-  font-size: $font-size-body;
-  font-weight: $font-weight-medium;
-  padding: $space-3 $space-6;
+  font-family: s.$font-family-secondary;
+  font-size: s.$font-size-body;
+  font-weight: s.$font-weight-medium;
+  padding: s.$space-3 s.$space-6;
   border: none;
-  border-radius: $radius-sm;
+  border-radius: s.$radius-sm;
   cursor: pointer;
-  @include tools.transition-fast(background-color, transform);
+  @include transition-fast(background-color, transform);
 
   &:hover {
     transform: translateY(-1px);
@@ -134,7 +134,7 @@ button {
   }
 
   &:focus-visible {
-    @include tools.focus-visible;
+    @include focus-visible;
   }
 
   &:disabled {

@@ -1,7 +1,9 @@
 $radius-none: 0;
+$radius-sm:   0.25rem;
 $radius-md:   3.125rem;
 
 :root {
   --radius-none: #{$radius-none};
+  --radius-sm:   #{$radius-sm};
   --radius-md:   #{$radius-md};
 }
