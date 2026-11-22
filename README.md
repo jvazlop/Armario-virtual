@@ -1,5 +1,8 @@
 # Armario-virtual
 
+## Demo
+- **GitHub Pages:** https://jvazlop.github.io/Armario-virtual/ElPerchero/
+
 ## Descripción
 
 Este proyecto consiste en diseñar una aplicación de armario virtual que permita organizar las prendas de ropa y crear combinaciones mediante IA.
