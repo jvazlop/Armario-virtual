@@ -1,0 +1,13 @@
+{
+  "name": "elperchero",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sass": "sass scss/main.scss ../css/main.css --style=expanded",
+    "sass:watch": "sass --watch scss/main.scss ../css/main.css",
+    "sass:prod": "sass scss/main.scss ../css/main.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
