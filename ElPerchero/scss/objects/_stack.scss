@@ -1,0 +1,26 @@
+@use '../settings' as *;
+
+.o-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.o-stack--xs > * + * {
+  margin-top: $space-1;
+}
+
+.o-stack--sm > * + * {
+  margin-top: $space-2;
+}
+
+.o-stack--md > * + * {
+  margin-top: $space-4;
+}
+
+.o-stack--lg > * + * {
+  margin-top: $space-6;
+}
+
+.o-stack--xl > * + * {
+  margin-top: $space-8;
+}
