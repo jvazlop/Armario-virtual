@@ -1,0 +1,49 @@
+@use '../settings' as *;
+@use '../tools' as *;
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  @include tools.transition-fast(color);
+
+  &:hover {
+    color: $color-primary-hover;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @include tools.focus-visible;
+  }
+}
+
+.menu a {
+  color: $color-text-primary;
+  font-family: $font-family-secondary;
+  font-size: $font-size-body;
+  font-weight: $font-weight-medium;
+  padding: $space-2 $space-3;
+  border-radius: $radius-sm;
+  @include tools.transition-fast(background-color, color);
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-surface-secondary;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    @include tools.focus-visible;
+  }
+}
+
+.logo a {
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-h2;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
