@@ -1,7 +1,7 @@
 # Armario-virtual
 
 ## Demo
-- **GitHub Pages:** https://jvazlop.github.io/Armario-virtual/ElPerchero/
+- **GitHub Pages:** https://jvazlop.github.io/Armario-virtual/
 
 ## Descripción
 
