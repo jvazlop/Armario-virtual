@@ -1,0 +1,9 @@
+$bp-desktop:  1024px;
+$bp-tablet:   768px;
+$bp-mobile:   480px;
+
+:root {
+  --bp-desktop:  #{$bp-desktop};
+  --bp-tablet:   #{$bp-tablet};
+  --bp-mobile:   #{$bp-mobile};
+}
