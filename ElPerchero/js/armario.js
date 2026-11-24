@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const contenedor = document.getElementById('listado-armario');
   const prendas = obtenerTodasLasPrendas();
 
+  document.getElementById('contador-prendas').textContent = `${prendas.length} prendas`;
+
   contenedor.innerHTML = prendas.map(p => `
     <article class="prenda-card" data-id="${p.id}">
       <button class="prenda-enlace" data-id="${p.id}">

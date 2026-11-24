@@ -159,6 +159,18 @@ export const prendas = [
     favorita: false,
     imagen: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=300&h=400&fit=crop',
     descripcion: 'Gorro acanalado, logo bordado'
+  },
+  {
+    id: 13,
+    nombre: 'Pantalón chino',
+    categoriaId: 2,
+    color: 'Marron',
+    talla: '32',
+    marca: 'Massimo',
+    temporada: 'Otoño',
+    favorita: false,
+    imagen: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=300&h=400&fit=crop',
+    descripcion: 'Tela técnico anti-arrugas'
   }
 ];
 
