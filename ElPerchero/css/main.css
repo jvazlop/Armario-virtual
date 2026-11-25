@@ -1717,3 +1717,247 @@ ul, ol {
     font-size: 1rem;
   }
 }
+
+/* ===========================================
+   AUTH - LOGIN / REGISTRO
+   =========================================== */
+
+.formulario-auth {
+  max-width: 420px;
+  margin: 0 auto var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-5);
+}
+
+.pestanas-auth {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-3);
+}
+
+.pestana {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.pestana:hover {
+  color: var(--color-text-primary);
+}
+
+.pestana.pestana-activa {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.campo-grupo {
+  margin-bottom: var(--space-2);
+}
+
+.formulario-auth button[type="submit"] {
+  margin-top: var(--space-2);
+}
+
+.campo-grupo label {
+  display: block;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.campo-grupo input.error,
+.campo-grupo textarea.error {
+  border-color: var(--color-error);
+}
+
+.campo-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.campo-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: var(--space-1);
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.campo-checkbox label {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.error-texto {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-error);
+  margin-top: var(--space-1);
+  min-height: 1.25rem;
+}
+
+.ayuda-contrasena {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.texto-auth {
+  margin-top: var(--space-8);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+}
+
+.texto-auth a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ===========================================
+   AYUDA Y SOPORTE - CONTACTO
+   =========================================== */
+
+.area-contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  max-width: 900px;
+  margin: 0 auto var(--space-8);
+}
+
+.formulario-contacto h3,
+.area-mensajes-enviados h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.label-motivo {
+  display: block;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.opciones-motivo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.opcion-radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.opcion-radio input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.contador-caracteres {
+  display: block;
+  text-align: right;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.lista-mensajes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mensaje-enviado {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--space-3);
+  padding: var(--space-4);
+}
+
+.mensaje-enviado .motivo {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.mensaje-enviado .texto {
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.mensaje-enviado .fecha {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.btn-eliminar-mensaje {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-error);
+  border-radius: var(--space-1);
+}
+
+.btn-eliminar-mensaje:hover {
+  background-color: var(--color-error);
+  color: var(--white);
+}
+
+/* Responsive auth y contacto */
+@media (max-width: 768px) {
+  .area-contacto {
+    gap: var(--space-6);
+  }
+
+  .formulario-auth {
+    padding: var(--space-6) var(--space-4);
+  }
+}

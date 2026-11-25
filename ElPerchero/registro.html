@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElPerchero - Registrarse</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+    <aside class="barra-lateral">
+        <header class="logo"><h1>ElPerchero</h1></header>
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html"><svg class="icon" aria-hidden="true"><use href="#icon-home"></use></svg> Inicio</a></li>
+                <li><a href="armario.html"><svg class="icon" aria-hidden="true"><use href="#icon-wardrobe"></use></svg> Armario</a></li>
+                <li><a href="favoritos.html"><svg class="icon" aria-hidden="true"><use href="#icon-heart"></use></svg> Favoritos</a></li>
+                <li><a href="anadir-prenda.html"><svg class="icon" aria-hidden="true"><use href="#icon-plus"></use></svg> Añadir</a></li>
+                <li><a href="chatbot.html"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg> ChatBot</a></li>
+                <li><a href="perfil.html"><svg class="icon" aria-hidden="true"><use href="#icon-user"></use></svg> Perfil</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- SVG Sprite -->
+    <svg style="display:none;" aria-hidden="true">
+        <symbol id="icon-home" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+        <symbol id="icon-wardrobe" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/></symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+        <symbol id="icon-chat" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+        <symbol id="icon-message" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+        <symbol id="icon-alert" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+        <symbol id="icon-heart-filled" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.14 1.59a2 2 0 0 1 0 2.82L12 7.87l-7.14-3.46a2 2 0 0 1 0-2.82L12 1l7.14 3.46z"/><path d="M12 12.13a2 2 0 0 1 0-2.82L12 5l7.14 3.46a2 2 0 0 1 0 2.82L12 12.13z"/></symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    </svg>
+
+    <main class="zona-principal">
+        <div class="formulario-auth">
+            <div class="pestanas-auth">
+                <button class="pestana" data-pestana="login">Iniciar sesión</button>
+                <button class="pestana pestana-activa" data-pestana="registro">Registrarse</button>
+            </div>
+
+            <form id="form-registro" novalidate>
+                <div class="campo-grupo">
+                    <label for="usuario">Nombre de usuario</label>
+                    <input type="text" id="usuario" name="usuario" required minlength="3" maxlength="30" placeholder="ejemplo">
+                    <span class="error-texto" id="error-usuario" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@gmail.com">
+                    <span class="error-texto" id="error-correo" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" required minlength="8">
+                    <span class="error-texto" id="error-contrasena" aria-live="polite"></span>
+                    <span class="ayuda-contrasena" id="ayuda-contrasena">Mínimo 8 caracteres, una mayúscula y un número</span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="repetir-contrasena">Confirmar Contraseña</label>
+                    <input type="password" id="repetir-contrasena" name="repetir-contrasena" required>
+                    <span class="error-texto" id="error-repetir-contrasena" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                    <span class="error-texto" id="error-fecha-nacimiento" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo campo-checkbox">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto términos y condiciones</label>
+                    <span class="error-texto" id="error-terminos" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo campo-checkbox">
+                    <input type="checkbox" id="notificaciones" name="notificaciones">
+                    <label for="notificaciones">Aceptar recibir notificaciones</label>
+                </div>
+
+                <button type="submit" class="btn btn-primaria btn-grande w-full">Registrarse</button>
+            </form>
+
+            <p class="texto-auth">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></p>
+        </div>
+    </main>
+
+</body>
+</html>
