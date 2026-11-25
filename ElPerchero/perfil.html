@@ -55,8 +55,8 @@
 
     <main class="zona-principal">
         <header class="datos-usuario">
-            <p class="dato-perfil"><strong>Nombre:</strong> Ana Rosa Melano</p>
-            <p class="dato-perfil"><strong>Correo:</strong> melanoanarosa@gmail.com</p>
+            <p class="dato-perfil"><strong>Nombre:</strong> <span id="nombre-perfil">Ana Rosa Melano</span></p>
+            <p class="dato-perfil"><strong>Correo:</strong> <span id="correo-perfil">melanoanarosa@gmail.com</span></p>
         </header>
         <nav class="opciones-perfil" aria-label="Opciones de cuenta">
             <ul>
@@ -68,6 +68,17 @@
         </nav>
 
     </main>
+
+    <script>
+      const usuarioGuardado = localStorage.getItem('usuarioActual');
+      if (usuarioGuardado) {
+        const usuario = JSON.parse(usuarioGuardado);
+        const nombreEl = document.getElementById('nombre-perfil');
+        const correoEl = document.getElementById('correo-perfil');
+        if (nombreEl) nombreEl.textContent = usuario.nombre;
+        if (correoEl) correoEl.textContent = usuario.correo;
+      }
+    </script>
 
 </body>
 </html>
