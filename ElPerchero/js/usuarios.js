@@ -1,11 +1,11 @@
-import { obtenerTodos, obtenerPorId, borrar } from './almacen.js';
+import { obtenerTodos, borrar } from './almacen.js';
 
 const contenedor = document.getElementById('lista-usuarios');
 
 function renderizarUsuarios() {
   const usuarios = obtenerTodos('usuarios');
 
-  if (!usuarios.length) {
+  if (!usuarios || !usuarios.length) {
     contenedor.innerHTML = `
       <div class="estado-vacio" style="grid-column: 1 / -1;">
         <p>No hay usuarios registrados.</p>
@@ -53,13 +53,10 @@ function manejarAcciones(e) {
     if (confirm('¿Estás seguro de que quieres borrar este usuario?')) {
       borrar('usuarios', id);
       renderizarUsuarios();
-      window.dispatchEvent(new Event('usuariosActualizados'));
     }
   }
 }
 
 contenedor.addEventListener('click', manejarAcciones);
-
-window.addEventListener('usuariosActualizados', renderizarUsuarios);
 
 renderizarUsuarios();

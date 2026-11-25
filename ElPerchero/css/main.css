@@ -1961,3 +1961,97 @@ ul, ol {
     padding: var(--space-6) var(--space-4);
   }
 }
+
+/* ===========================================
+   USUARIOS - TABLA
+   =========================================== */
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--space-2);
+  overflow: hidden;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tabla-usuarios th {
+  background-color: var(--color-surface-secondary);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tabla-usuarios tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-usuarios tr:hover {
+  background-color: var(--color-surface-secondary);
+}
+
+.tabla-usuarios td {
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+}
+
+.tabla-usuarios .btn-editar,
+.tabla-usuarios .btn-borrar {
+  font-size: 0.75rem;
+  padding: var(--space-1) var(--space-3);
+  margin-right: var(--space-2);
+}
+
+.tabla-usuarios .btn-editar {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.tabla-usuarios .btn-editar:hover {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.tabla-usuarios .btn-borrar {
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+}
+
+.tabla-usuarios .btn-borrar:hover {
+  background-color: var(--color-error);
+  color: var(--white);
+}
+
+/* Responsive tabla usuarios */
+@media (max-width: 768px) {
+  .tabla-usuarios-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabla-usuarios {
+    font-size: 0.8125rem;
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: var(--space-2) var(--space-3);
+    white-space: nowrap;
+  }
+
+  .tabla-usuarios .btn-editar,
+  .tabla-usuarios .btn-borrar {
+    font-size: 0.6875rem;
+    padding: var(--space-1) var(--space-2);
+    margin-right: var(--space-1);
+  }
+}
