@@ -6,6 +6,17 @@
     <title>ElPerchero - Iniciar sesión</title>
     <link rel="stylesheet" href="css/main.css">
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script>
+      // Pestaña Registrarse
+      document.querySelectorAll('.pestana').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (btn.dataset.pestana === 'registro') {
+            window.location.href = 'registro.html';
+          }
+        });
+      });
+    </script>
 </head>
 <body>
 
@@ -75,6 +86,9 @@
             <p class="texto-auth">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
         </div>
     </main>
+
+    <script type="module" src="./js/auth-ui.js"></script>
+    <script type="module" src="./js/login-form.js"></script>
 
 </body>
 </html>
