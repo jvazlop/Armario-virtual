@@ -60,28 +60,28 @@ function validarCampo(campo) {
   let error = null;
 
   switch (campo.id) {
-    case 'usuario':
-      error = validarRequerido(valor);
-      break;
-    case 'correo':
-      error = validarEmail(valor);
-      break;
-    case 'contrasena':
-      if (!modoEdicion || valor) {
-        error = validarPassword(valor);
-      }
-      break;
-    case 'repetir-contrasena':
-      if (!modoEdicion || valor) {
-        error = validarRepetirPassword(valor, campos.contrasena.value);
-      }
-      break;
-    case 'fecha-nacimiento':
-      error = validarFechaNacimiento(valor);
-      break;
-    case 'terminos':
-      error = validarCheckbox(valor);
-      break;
+  case 'usuario':
+    error = validarRequerido(valor);
+    break;
+  case 'correo':
+    error = validarEmail(valor);
+    break;
+  case 'contrasena':
+    if (!modoEdicion || valor) {
+      error = validarPassword(valor);
+    }
+    break;
+  case 'repetir-contrasena':
+    if (!modoEdicion || valor) {
+      error = validarRepetirPassword(valor, campos.contrasena.value);
+    }
+    break;
+  case 'fecha-nacimiento':
+    error = validarFechaNacimiento(valor);
+    break;
+  case 'terminos':
+    error = validarCheckbox(valor);
+    break;
   }
 
   mostrarError(campo.id, error);
@@ -116,11 +116,11 @@ function validarTodo() {
     { id: 'contrasena', fn: () => {
       if (!modoEdicion || campos.contrasena.value) return validarCampo(campos.contrasena);
       return true;
-    }},
+    } },
     { id: 'repetir-contrasena', fn: () => {
       if (!modoEdicion || campos.repetirContrasena.value) return validarCampo(campos.repetirContrasena);
       return true;
-    }},
+    } },
     { id: 'fecha-nacimiento', fn: () => validarCampo(campos.fechaNacimiento) },
     { id: 'terminos', fn: () => validarCampo(campos.terminos) }
   ];
