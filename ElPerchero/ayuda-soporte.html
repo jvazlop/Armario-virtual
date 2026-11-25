@@ -38,8 +38,6 @@
     </svg>
 
     <main class="zona-principal">
-        <a href="index.html" class="btn btn-secundaria btn-volver mb-6"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Volver al inicio</a>
-
         <header class="cabecera-seccion">
             <h2>Ayuda y Soporte</h2>
         </header>
@@ -67,21 +65,13 @@
                     </div>
 
                     <div class="campo-grupo">
-                        <label class="label-motivo">Motivo</label>
-                        <div class="opciones-motivo">
-                            <label class="opcion-radio">
-                                <input type="radio" name="motivo" value="reservar-mesa" required> Reservar mesa
-                            </label>
-                            <label class="opcion-radio">
-                                <input type="radio" name="motivo" value="incidencia-pedido"> Incidencia con un pedido
-                            </label>
-                            <label class="opcion-radio">
-                                <input type="radio" name="motivo" value="proponer-ruta"> Proponer una ruta
-                            </label>
-                            <label class="opcion-radio">
-                                <input type="radio" name="motivo" value="otro"> Otro
-                            </label>
-                        </div>
+                        <label for="motivo-contacto">Motivo</label>
+                        <select id="motivo-contacto" name="motivo" required>
+                            <option value="">Selecciona un motivo</option>
+                            <option value="consulta-prenda">Consulta sobre una prenda</option>
+                            <option value="problema-armario">Problema con mi armario virtual</option>
+                            <option value="sugerencia">Sugerencia o mejora</option>
+                        </select>
                         <span class="error-texto" id="error-motivo-contacto" aria-live="polite"></span>
                     </div>
 

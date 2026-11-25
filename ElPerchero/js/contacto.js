@@ -8,7 +8,7 @@ const campos = {
   nombre: document.getElementById('nombre-contacto'),
   correo: document.getElementById('correo-contacto'),
   telefono: document.getElementById('telefono-contacto'),
-  motivo: document.querySelectorAll('input[name="motivo"]'),
+  motivo: document.getElementById('motivo-contacto'),
   llamar: document.getElementById('llamar-contacto'),
   mensaje: document.getElementById('mensaje-contacto')
 };
@@ -30,26 +30,17 @@ function init() {
   actualizarContador();
 
   Object.values(campos).forEach(campo => {
-    if (Array.isArray(campo)) {
-      campo.forEach(radio => {
-        radio.addEventListener('blur', () => validarCampo(radio));
-        radio.addEventListener('input', () => {
-          radio.dataset.tocado = 'true';
-          validarCampo(radio);
-        });
-      });
-    } else {
-      campo.addEventListener('blur', () => validarCampo(campo));
-      campo.addEventListener('input', () => {
-        campo.dataset.tocado = 'true';
-        if (campo.id === 'mensaje-contacto') actualizarContador();
-        validarCampo(campo);
-      });
-    }
+    campo.addEventListener('change', () => validarCampo(campo, campo.id));
+    campo.addEventListener('blur', () => validarCampo(campo, campo.id));
+    campo.addEventListener('input', () => {
+      campo.dataset.tocado = 'true';
+      if (campo.id === 'mensaje-contacto') actualizarContador();
+      validarCampo(campo, campo.id);
+    });
   });
 
   campos.llamar.addEventListener('change', () => {
-    validarCampo(campos.telefono);
+    validarCampo(campos.telefono, 'telefono-contacto');
   });
 
   form.addEventListener('submit', manejarSubmit);
@@ -85,7 +76,7 @@ function actualizarContador() {
   contador.textContent = `${longitud} / 500`;
 }
 
-function validarCampo(campo) {
+function validarCampo(campo, idCampo) {
   campo.dataset.tocado = 'true';
   let valor = campo.value;
   let error = null;
@@ -93,11 +84,8 @@ function validarCampo(campo) {
   if (campo.type === 'checkbox') {
     valor = campo.checked;
     error = validarCheckbox(valor);
-  } else if (Array.isArray(campo)) {
-    const seleccionado = Array.from(campo).some(r => r.checked);
-    error = seleccionado ? null : 'Selecciona un motivo';
   } else {
-    switch (campo.id) {
+    switch (idCampo) {
     case 'nombre-contacto':
       error = validarRequerido(valor);
       break;
@@ -111,52 +99,71 @@ function validarCampo(campo) {
         error = validarTelefono(valor);
       }
       break;
+    case 'motivo-contacto':
+      error = validarRequerido(valor);
+      break;
     case 'mensaje-contacto':
       error = validarLongitudMensaje(valor, 10, 500);
       break;
     }
   }
 
-  mostrarError(campo.id, error);
+  mostrarError(idCampo, error);
   return !error;
 }
 
 function mostrarError(idCampo, mensaje) {
+  const clave = idACampo[idCampo];
   const campo = document.getElementById(idCampo);
-  const errorElem = errores[idCampo.replace('contacto_', '')] || errores[idCampo];
+  const errorElem = errores[clave];
   if (!errorElem) return;
 
   const errorId = `error-${idCampo}`;
   if (mensaje) {
-    campo.classList.add('error');
-    campo.setAttribute('aria-invalid', 'true');
+    if (campo) {
+      campo.classList.add('error');
+      campo.setAttribute('aria-invalid', 'true');
+      campo.setAttribute('aria-describedby', errorId);
+    }
     errorElem.textContent = mensaje;
     errorElem.id = errorId;
-    campo.setAttribute('aria-describedby', errorId);
   } else {
-    campo.classList.remove('error');
-    campo.setAttribute('aria-invalid', 'false');
+    if (campo) {
+      campo.classList.remove('error');
+      campo.setAttribute('aria-invalid', 'false');
+      campo.removeAttribute('aria-describedby');
+    }
     errorElem.textContent = '';
   }
 }
+
+const idACampo = {
+  'nombre-contacto': 'nombre',
+  'correo-contacto': 'correo',
+  'telefono-contacto': 'telefono',
+  'motivo-contacto': 'motivo',
+  'mensaje-contacto': 'mensaje'
+};
 
 function validarTodo() {
   let esValido = true;
   let primerCampoConError = null;
 
   const checks = [
-    { id: 'nombre-contacto', fn: () => validarCampo(campos.nombre) },
-    { id: 'correo-contacto', fn: () => validarCampo(campos.correo) },
-    { id: 'telefono-contacto', fn: () => validarCampo(campos.telefono) },
-    { id: 'motivo', fn: () => validarCampo(campos.motivo) },
-    { id: 'mensaje-contacto', fn: () => validarCampo(campos.mensaje) }
+    { id: 'nombre-contacto', fn: () => validarCampo(campos.nombre, 'nombre-contacto') },
+    { id: 'correo-contacto', fn: () => validarCampo(campos.correo, 'correo-contacto') },
+    { id: 'telefono-contacto', fn: () => validarCampo(campos.telefono, 'telefono-contacto') },
+    { id: 'motivo-contacto', fn: () => validarCampo(campos.motivo, 'motivo-contacto') },
+    { id: 'mensaje-contacto', fn: () => validarCampo(campos.mensaje, 'mensaje-contacto') }
   ];
 
   checks.forEach(({ id, fn }) => {
     const valido = fn();
     if (!valido) {
       esValido = false;
-      if (!primerCampoConError) primerCampoConError = document.getElementById(id);
+      if (!primerCampoConError) {
+        primerCampoConError = document.getElementById(id);
+      }
     }
   });
 
@@ -178,7 +185,7 @@ function manejarSubmit(e) {
     nombre: campos.nombre.value.trim(),
     correo: campos.correo.value.trim(),
     telefono: campos.telefono.value.trim(),
-    motivo: Array.from(campos.motivo).find(r => r.checked).value,
+    motivo: campos.motivo.value,
     llamar: campos.llamar.checked,
     texto: campos.mensaje.value.trim(),
     fecha: new Date().toISOString()
@@ -199,11 +206,6 @@ function crearElementoMensaje(m) {
   contenedor.className = 'mensaje-enviado';
   contenedor.dataset.id = m.id;
 
-  const motivo = document.createElement('div');
-  motivo.className = 'motivo';
-  motivo.textContent = m.motivo;
-  contenedor.appendChild(motivo);
-
   const autor = document.createElement('div');
   const nombre = document.createElement('strong');
   nombre.textContent = m.nombre;
@@ -213,16 +215,23 @@ function crearElementoMensaje(m) {
   autor.appendChild(correo);
   contenedor.appendChild(autor);
 
-  const texto = document.createElement('div');
-  texto.className = 'texto';
-  texto.textContent = m.texto;
-  contenedor.appendChild(texto);
+  if (m.motivo) {
+    const motivo = document.createElement('div');
+    motivo.className = 'motivo';
+    motivo.textContent = m.motivo;
+    contenedor.appendChild(motivo);
+  }
 
   if (m.telefono) {
     const telefono = document.createElement('div');
     telefono.textContent = `Tel: ${m.telefono}`;
     contenedor.appendChild(telefono);
   }
+
+  const texto = document.createElement('div');
+  texto.className = 'texto';
+  texto.textContent = m.texto;
+  contenedor.appendChild(texto);
 
   const fecha = document.createElement('div');
   fecha.className = 'fecha';

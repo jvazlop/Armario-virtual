@@ -81,9 +81,9 @@ export function validarTelefono(valor) {
     return null;
   }
 
-  const telefonoRegex = /^\+?[0-9\s\-()]{7,}$/;
+  const telefonoRegex = /^\+?[0-9]{7,}$/;
   if (!telefonoRegex.test(valor.trim())) {
-    return 'Introduce un número de teléfono válido';
+    return 'Introduce un número de teléfono válido (+ y números, sin espacios)';
   }
   return null;
 }

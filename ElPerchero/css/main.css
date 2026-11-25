@@ -2055,3 +2055,24 @@ ul, ol {
     margin-right: var(--space-1);
   }
 }
+
+/* Estilo para select en formularios */
+.campo-grupo select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+}
+
+.campo-grupo select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.campo-grupo select.error {
+  border-color: var(--color-error);
+}
